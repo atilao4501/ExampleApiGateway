@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "oPhGqzqLC/YpmHdJFWseCM9bl+AkHrUkHofrFzlDiqI=",
+  "Source": "ApiServiceTwo",
+  "BasePath": "_content/ApiServiceTwo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

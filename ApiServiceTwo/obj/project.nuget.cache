@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZvuF+FEF0E4C3DFE7572okEYBHHA7u+M8Kp4ovEtpD65s16D7uwevEmYPL7ff0mpw2+sXhtPzq9XYrZ/v3cnAQ==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub\\ExampleApiGateway\\ApiServiceTwo\\ApiServiceTwo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\atila.alcantara\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\atila.alcantara\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\atila.alcantara\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\atila.alcantara\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\atila.alcantara\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\atila.alcantara\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
