@@ -4,32 +4,38 @@ using Ocelot.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.SetBasePath(builder.Environment.ContentRootPath)
-                     .AddJsonFile($"configuration.{builder.Environment.EnvironmentName}.json", optional: false, reloadOnChange: true)
-                     .AddEnvironmentVariables() ;
+                     .AddJsonFile($"ocelot.json", optional: false, reloadOnChange: true)
+                     .AddEnvironmentVariables();
 
 // Add services to the container.
 
-builder.Services.AddOcelot(builder.Configuration); 
+builder.Services.AddOcelot(builder.Configuration);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerForOcelot(builder.Configuration);
 
 var app = builder.Build();
 
+
+app.UsePathBase("/gateway");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    //app.UseSwagger();
+    //app.UseSwaggerUI();
+
 }
 
-app.UseAuthorization();
-
-app.MapGet("/", async context =>
+app.UseSwaggerForOcelotUI(opt =>
 {
-    await context.Response.WriteAsync("API GATEWAY FUNCIONANDO");
+    opt.DownstreamSwaggerEndPointBasePath = "/gateway/swagger/docs";
+    opt.PathToSwaggerGenerator = "/swagger/docs";
+
 });
+
+app.UseAuthorization();
 
 app.UseOcelot().Wait();
 
